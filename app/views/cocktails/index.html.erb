@@ -1,14 +1,10 @@
 <div class="container">
   <div class="row">
-    <div class="items col-sm-12 col-md-4 col-offset-4">
-      <h1>Cocktails</h1>
-      <ul>
-        <% @cocktails.each do |cocktail|  %>
-        <li>
-          <%= link_to cocktail.name, cocktail_path(cocktail) %>
-        </li>
-        <% end  %>
-      </ul>
+    <div class="col-xs-12 col-sm-4">
+      <!-- insert <div class="card"> -->
+      <% @cocktails.each do |cocktail|  %>
+        <%= image_tag cocktail.image_url, class: "card" %>
+      <% end  %>
     </div>
   </div>
 </div>

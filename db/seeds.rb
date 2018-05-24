@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Ingredient.destroy_all if Rails.env.delevopment?
+
 require 'json'
 require 'open-uri'
 
@@ -14,9 +16,15 @@ url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 list_serialized = open(url).read
 list = JSON.parse(list_serialized)
 list['drinks'].each do |ingredient|
+  print "."
   Ingredient.create name: ingredient['strIngredient1']
 end
-
+puts
 puts "completed seed"
 
+Cocktail.destroy_all if Rails.env.delevopment?
+puts "Adding drinks"
+Cocktail.create(name: "Matthan", image_url: "https://cdn.liquor.com/wp-content/uploads/2015/03/hub_classic_cocktail_margarita.jpg")
+Cocktail.create(name: "Bloody Mary", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1zABVHOVH7EP6QjTX2nNGbJUCWR8E4MAdwREJKlPgUNg5wPUq_w")
+puts "completed"
 

@@ -1,2 +1,20 @@
-<h1><%= @cocktail.name %></h1>
-<h4>Indegrients</h4>
+<div class="container">
+  <div class="row">
+    <h1><%= @cocktail.name %></h1>
+    <h4>Indegrients</h4>
+    <%= link_to "Add dose",  new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+    <ul class="list-group">
+      <% @cocktail.doses.each do |dose| %>
+        <li class="list-group-item col-sm-6 col-md-8">
+          <%= dose.ingredient.name %>
+
+      <%= dose.description %>
+
+      <%= link_to "Delete", dose_path(dose), class: "btn btn-danger btn-sm pull-right",
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+    <% end %>
+    </li>
+    </ul>
+  </div>
+</div>
