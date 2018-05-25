@@ -24,7 +24,7 @@ puts "completed seed"
 
 Cocktail.destroy_all if Rails.env.delevopment?
 puts "Adding drinks"
-Cocktail.create(name: "Matthan", image_url: "https://cdn.liquor.com/wp-content/uploads/2015/03/hub_classic_cocktail_margarita.jpg")
-Cocktail.create(name: "Bloody Mary", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1zABVHOVH7EP6QjTX2nNGbJUCWR8E4MAdwREJKlPgUNg5wPUq_w")
+# Cocktail.create(name: "Matthan", image_url: "http://res.cloudinary.com/dfr1rmbqg/image/upload/v1527231030/image1.jpg")
+# Cocktail.create(name: "Bloody Mary", image_url: "http://res.cloudinary.com/dfr1rmbqg/image/upload/v1527231029/image2.jpg")
 puts "completed"
 
