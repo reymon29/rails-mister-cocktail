@@ -1,23 +1,14 @@
 <div class="navbar-wagon">
   <!-- Logo -->
- <%= image_tag("logo.png", class: "navbar-wagon-brand") %>
+  <%= link_to cocktails_path do %>
+    <%= image_tag "logo.png", class: "navbar-wagon-brand" %>
+  <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <%= link_to "Cocktail", cocktails_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Add Cocktail", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
-    <!-- Profile picture with dropdown list -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
-      </div>
-    </div>
   </div>
 
   <!-- Dropdown appearing on mobile only -->
@@ -31,3 +22,4 @@
     </div>
   </div>
 </div>
+
