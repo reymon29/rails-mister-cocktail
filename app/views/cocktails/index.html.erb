@@ -1,10 +1,21 @@
 <div class ="banner">
-  <% @cocktails.each do |each| %>
-  <div>
-    <p>Better Layout is needed! Link to show works kinda</p>
-  <%= link_to each.name, cocktail_path(each) %>
-
-<% end %>
+  <div class="row">
+    <h1>Welcome Rey's bar</h1>
   </div>
+  <% @cocktails.each do |item| %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path item.photo %>');">
+        <div class="card-category"><%= Cocktail.new.fake %></div>
+        <div class="card-description">
+          <h2><%= item.name %></h2>
+          <p>Featuring @ Bar Rey</p>
+        </div>
+        <img class="card-user avatar" src="https://kitt.lewagon.com/placeholder/users/atmosfeer">
+        <a class="card-link" href="#"></a>
+      </div>
+    </div>
+    </div>
+    <% end %>
 </div>
 

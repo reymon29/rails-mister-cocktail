@@ -6,4 +6,11 @@ class Cocktail < ApplicationRecord
   validates :photo, uniqueness: true, presence: true
 
 
+  def fake
+    a = ["Popular", "Okay", "Oh yeah!"]
+    return a.sample
+  end
+
+
+
 end
