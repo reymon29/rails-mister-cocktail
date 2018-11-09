@@ -24,7 +24,18 @@ puts "completed seed"
 
 Cocktail.destroy_all if Rails.env.delevopment?
 puts "Adding drinks"
-Cocktail.create(name: "Matthan", image_url: "image/upload/v1527234020/anbdeewmrlayzkxqffqf.jpg")
-Cocktail.create(name: "Bloody Mary", image_url: "image/upload/v1527233580/jb8iu8qfvrl6m26gh6oy.jpg")
+aurl = "https://www.thespruceeats.com/thmb/YlhdecRcUlxy5o5TFfcmqv1CQiw=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/gin-tonic-5a8f334b8e1b6e0036a9631d.jpg"
+a = Cocktail.new(name: "gin and tonic")
+a.photo.remote_photo_url = aurl
+
+burl = "https://www.anightowlblog.com/wp-content/uploads/2017/02/Moonlight-Miami-Mule-Cocktail-FEATURE.jpg"
+b = Cocktail.new(name: "Moonlight Miami Mule")
+b.photo.remote_photo_url = burl
+
+
+curl = "https://www.gimmesomeoven.com/wp-content/uploads/2018/03/How-To-Make-A-Mimosa-Recipe-2.jpg"
+c = Cocktail.new(name: "MIMOSAS")
+c.photo.remote_photo_url = curl
+
 puts "completed"
 
