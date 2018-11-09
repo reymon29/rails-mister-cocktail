@@ -1,3 +1,8 @@
+.image-change{
+  width: 48%;
+  margin-right: 14px;
+  padding: 12px;
+}
 .card {
   height: 250px;
   width: 350px;
@@ -50,16 +55,16 @@
   opacity: 0.1;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 200px) {
     .card {
         height: 150px;
         width: 250px;
     }
 }
-@media only screen and (max-width: 768px) {
-    .card {
-        height: 450px;
-        width: 550px;
-        left: 50px;
-    }
-}
+// @media only screen and (max-width: 768px) {
+//     .card {
+//         height: 450px;
+//         width: 550px;
+//         left: 50px;
+//     }
+// }
